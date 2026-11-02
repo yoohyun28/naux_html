@@ -1,2 +1,565 @@
-xixi haha
-gugu gaga
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZHOU YUXUAN | Welcome to My World</title>
+  <meta name="description" content="한림대학교 경영학과 ZHOU YUXUAN의 발랄하고 따뜻한 캠퍼스 이야기와 대학생활 소개 웹사이트입니다.">
+  
+  <!-- Google Fonts: Gowun Dodum (한글 귀여운 폰트) & Nunito (영문 발랄 폰트) & Noto Sans SC (중문) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+SC:wght@400;500;700&family=Nunito:wght@400;600;700;800;900&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="lang-ko">
+  <!-- 배경 데코 요소 (민트 & 파스텔 플로팅 버블 / 스티커) -->
+  <div class="bg-decorations" aria-hidden="true">
+    <div class="decor-shape shape-1">🌱</div>
+    <div class="decor-shape shape-2">✨</div>
+    <div class="decor-shape shape-3">🍃</div>
+    <div class="decor-shape shape-4">⭐</div>
+    <div class="decor-shape shape-5">🌸</div>
+    <div class="decor-shape shape-6">🍡</div>
+  </div>
+
+  <!-- 상단 네비게이션 헤더 -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="nav-logo">
+        <span class="logo-badge">ZYX</span>
+        <span class="logo-text">ZHOU YUXUAN</span>
+      </a>
+
+      <!-- 데스크톱 메뉴 -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active" data-nav="home">
+          <i data-lucide="home"></i>
+          <span data-i18n="nav_home">Home</span>
+        </a>
+        <a href="#about" class="nav-link" data-nav="about">
+          <i data-lucide="user"></i>
+          <span data-i18n="nav_about">About Me</span>
+        </a>
+        <a href="#campus" class="nav-link" data-nav="campus">
+          <i data-lucide="graduation-cap"></i>
+          <span data-i18n="nav_campus">Campus Life</span>
+        </a>
+        <a href="#hobbies" class="nav-link" data-nav="hobbies">
+          <i data-lucide="utensils"></i>
+          <span data-i18n="nav_hobbies">My Hobbies</span>
+        </a>
+        <a href="#skills" class="nav-link" data-nav="skills">
+          <i data-lucide="sparkles"></i>
+          <span data-i18n="nav_skills">Skills</span>
+        </a>
+      </nav>
+
+      <!-- 언어 전환 및 모바일 메뉴 토글 -->
+      <div class="nav-actions">
+        <!-- 언어 토글 스위치 -->
+        <div class="lang-switcher" id="lang-switcher" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" id="btn-ko" onclick="setLanguage('ko')">
+            <span class="flag">🇰🇷</span> KR
+          </button>
+          <button type="button" class="lang-btn" id="btn-zh" onclick="setLanguage('zh')">
+            <span class="flag">🇨🇳</span> CN
+          </button>
+        </div>
+
+        <!-- 모바일 햄버거 버튼 -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- 모바일 드롭다운 메뉴 -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#home" class="mobile-link" onclick="closeMobileMenu()" data-i18n="nav_home">Home</a>
+      <a href="#about" class="mobile-link" onclick="closeMobileMenu()" data-i18n="nav_about">About Me</a>
+      <a href="#campus" class="mobile-link" onclick="closeMobileMenu()" data-i18n="nav_campus">Campus Life</a>
+      <a href="#hobbies" class="mobile-link" onclick="closeMobileMenu()" data-i18n="nav_hobbies">My Hobbies</a>
+      <a href="#skills" class="mobile-link" onclick="closeMobileMenu()" data-i18n="nav_skills">Skills</a>
+    </div>
+  </header>
+
+  <!-- 메인 콘텐츠 영역 -->
+  <main id="main-content">
+
+    <!-- 1. Hero 섹션 (Home) -->
+    <section class="section hero-section" id="home">
+      <div class="hero-container">
+        <!-- 왼쪽 소개 텍스트 및 태그 -->
+        <div class="hero-content">
+          <div class="hero-sticker-badge">
+            <span class="sticker-emoji">🌱</span>
+            <span data-i18n="hero_badge">Campus Life Diary</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-sub" data-i18n="hero_sub">Welcome to My World!</span>
+            <span class="title-main">
+              <span data-i18n="hero_hello_prefix">안녕하세요,</span><br>
+              <span class="highlight-name">ZHOU YUXUAN</span><span data-i18n="hero_hello_suffix">입니다!</span>
+            </span>
+          </h1>
+
+          <p class="hero-desc" data-i18n="hero_desc">
+            한림대학교에서 경영학을 배우며, 활기찬 대학생활과 따뜻한 친구들과의 추억을 소중히 채워가고 있어요. 저의 밝고 소소한 일상 속으로 초대합니다!
+          </p>
+
+          <div class="hero-info-chips">
+            <div class="chip">
+              <i data-lucide="school"></i>
+              <span data-i18n="chip_school">한림대학교 (Hallym Univ.)</span>
+            </div>
+            <div class="chip">
+              <i data-lucide="book-open"></i>
+              <span data-i18n="chip_major">경영학 전공 (4학년)</span>
+            </div>
+            <div class="chip mbti-chip">
+              <i data-lucide="heart"></i>
+              <span>MBTI: <strong>ESFP</strong> ✨</span>
+            </div>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#about" class="btn btn-primary" id="btn-explore">
+              <span data-i18n="btn_explore">프로필 둘러보기</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="#campus" class="btn btn-secondary" id="btn-campus">
+              <span data-i18n="btn_campus">캠퍼스 활동 보기</span>
+              <i data-lucide="sparkle"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 오른쪽 프로필 카드 비주얼 (제공해주신 프로필 사진 활용) -->
+        <div class="hero-visual">
+          <div class="avatar-card-wrapper">
+            <div class="avatar-glow-ring"></div>
+            <div class="avatar-card">
+              <div class="avatar-frame">
+                <img src="./NSHM_PHOTO_2024_1_17_12_57_19.jpg" alt="ZHOU YUXUAN 프로필 사진" class="profile-img" id="hero-profile-img">
+              </div>
+              <div class="avatar-card-info">
+                <div class="user-name">ZHOU YUXUAN</div>
+                <div class="user-status">
+                  <span class="status-dot"></span>
+                  <span data-i18n="status_active">캠퍼스 라이프 즐기는 중 🌿</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 스티커 데코 뱃지 -->
+            <div class="floating-badge badge-esfp">
+              <span class="badge-icon">💖</span>
+              <div class="badge-text">
+                <span class="badge-title">ESFP</span>
+                <span class="badge-sub" data-i18n="badge_mbti_sub">자유로운 연예인</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-food">
+              <span class="badge-icon">🍰</span>
+              <div class="badge-text">
+                <span class="badge-title" data-i18n="badge_food_title">맛집 탐방러</span>
+                <span class="badge-sub" data-i18n="badge_food_sub">행복한 미식 생활</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About Me 섹션 -->
+    <section class="section about-section" id="about">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle" data-i18n="about_subtitle">Who Am I?</span>
+          <h2 class="section-title" data-i18n="about_title">나를 소개합니다</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- 프로필 요약 카드 -->
+          <div class="about-summary-card">
+            <div class="profile-thumb-box">
+              <img src="./NSHM_PHOTO_2024_1_17_12_57_19.jpg" alt="ZHOU YUXUAN" class="summary-thumb">
+              <div class="thumb-badge">4th Year</div>
+            </div>
+            <h3 class="summary-name">ZHOU YUXUAN</h3>
+            <p class="summary-uni">Hallym University</p>
+            <p class="summary-dept" data-i18n="summary_major_text">경영대학 경영학 전공</p>
+
+            <hr class="card-divider">
+
+            <div class="quick-facts">
+              <div class="fact-row">
+                <span class="fact-label" data-i18n="fact_grade_label">학년</span>
+                <span class="fact-value" data-i18n="fact_grade_val">4학년 (Senior)</span>
+              </div>
+              <div class="fact-row">
+                <span class="fact-label">MBTI</span>
+                <span class="fact-value highlight-pink">ESFP (외향·감각·감정·인식)</span>
+              </div>
+              <div class="fact-row">
+                <span class="fact-label" data-i18n="fact_lang_label">언어</span>
+                <span class="fact-value" data-i18n="fact_lang_val">중국어 (모국어), 한국어</span>
+              </div>
+              <div class="fact-row">
+                <span class="fact-label" data-i18n="fact_interest_label">관심사</span>
+                <span class="fact-value" data-i18n="fact_interest_val">문화교류, 맛집 탐방, 사진</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 성격 및 상세 스토리 -->
+          <div class="about-details">
+            <div class="detail-card story-card">
+              <div class="card-head">
+                <div class="head-icon icon-mint"><i data-lucide="sparkles"></i></div>
+                <div>
+                  <h4 class="card-title" data-i18n="story_title">밝고 따뜻한 에너지, ESFP</h4>
+                  <span class="card-badge" data-i18n="story_tag">자연스러운 친화력</span>
+                </div>
+              </div>
+              <p class="card-p" data-i18n="story_p1">
+                사람들과 소통하는 것을 좋아하고 긍정적인 에너지를 전하는 성격입니다. 한림대학교에서 경영학을 공부하며 글로벌한 시야를 넓히고 있으며, 다양한 문화적 배경을 가진 동기들과 스스럼없이 어울립니다.
+              </p>
+              <p class="card-p" data-i18n="story_p2">
+                "매 순간 진심을 다하고 즐겁게!"를 모토로, 대학 캠퍼스에서 경험할 수 있는 다양한 교내 프로그램과 맛있는 음식 탐방을 통해 풍성한 배움과 추억을 만들고 있습니다.
+              </p>
+            </div>
+
+            <!-- 핵심 특성 3가지 그리드 -->
+            <div class="traits-grid">
+              <div class="trait-box">
+                <div class="trait-emoji">🤝</div>
+                <h5 class="trait-title" data-i18n="trait1_title">뛰어난 친화력</h5>
+                <p class="trait-desc" data-i18n="trait1_desc">처음 만나는 학우들과도 자연스럽게 대화를 트고 편안한 분위기를 만듭니다.</p>
+              </div>
+              <div class="trait-box">
+                <div class="trait-emoji">🌟</div>
+                <h5 class="trait-title" data-i18n="trait2_title">열정적인 참여</h5>
+                <p class="trait-desc" data-i18n="trait2_desc">튜터링, 멘토링, 문화교류 등 나눔과 성장이 있는 활동에 적극적으로 임합니다.</p>
+              </div>
+              <div class="trait-box">
+                <div class="trait-emoji">📸</div>
+                <h5 class="trait-title" data-i18n="trait3_title">소소한 일상의 기록</h5>
+                <p class="trait-desc" data-i18n="trait3_desc">친구들과의 맛집 탐방과 캠퍼스 순간들을 예쁜 사진으로 간직하는 것을 즐깁니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Campus Life 섹션 -->
+    <section class="section campus-section" id="campus">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle" data-i18n="campus_subtitle">My University Days</span>
+          <h2 class="section-title" data-i18n="campus_title">캠퍼스 라이프 & 교내 활동</h2>
+          <div class="title-underline"></div>
+          <p class="section-desc" data-i18n="campus_desc">
+            서로 배우고 나누는 소중한 경험! 한림대학교에서 성실하게 참여해 온 주요 교내 프로그램들입니다.
+          </p>
+        </div>
+
+        <div class="campus-cards-grid">
+          <!-- 1. 문화 교류 프로그램 -->
+          <div class="campus-card">
+            <div class="campus-card-top">
+              <span class="campus-tag tag-mint" data-i18n="tag_exchange">Global Culture</span>
+              <div class="campus-card-icon icon-mint">
+                <i data-lucide="globe"></i>
+              </div>
+            </div>
+            <h3 class="campus-card-title" data-i18n="campus1_title">문화 교류 프로그램</h3>
+            <p class="campus-card-desc" data-i18n="campus1_desc">
+              다국적 학생들과 교류하며 서로의 언어와 문화를 깊이 이해하고 존중하는 장에 참여했습니다. 글로벌 친화력과 소통 능력을 기르는 뜻깊은 시간입니다.
+            </p>
+            <div class="campus-card-highlights">
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span data-i18n="campus1_pt1">다문화 이해 및 소통 활성화</span>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span data-i18n="campus1_pt2">글로벌 친구들과의 네트워크 형성</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. 멘토링 프로그램 -->
+          <div class="campus-card highlight-border">
+            <div class="campus-card-top">
+              <span class="campus-tag tag-yellow" data-i18n="tag_mentoring">Mentoring</span>
+              <div class="campus-card-icon icon-yellow">
+                <i data-lucide="users"></i>
+              </div>
+            </div>
+            <h3 class="campus-card-title" data-i18n="campus2_title">멘토링 프로그램</h3>
+            <p class="campus-card-desc" data-i18n="campus2_desc">
+              선후배 간의 유대감을 형성하고 학교 생활의 꿀팁과 학업 노하우를 공유하는 멘토링 활동에 참여했습니다. 서로의 고민을 나누고 지지해 주는 든든한 동반자 역할을 경험했습니다.
+            </p>
+            <div class="campus-card-highlights">
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span data-i18n="campus2_pt1">캠퍼스 적응 및 학업 가이드</span>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span data-i18n="campus2_pt2">따뜻한 공감과 신뢰 구축</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. 튜터링 프로그램 -->
+          <div class="campus-card">
+            <div class="campus-card-top">
+              <span class="campus-tag tag-blue" data-i18n="tag_tutoring">Tutoring</span>
+              <div class="campus-card-icon icon-blue">
+                <i data-lucide="book-marked"></i>
+              </div>
+            </div>
+            <h3 class="campus-card-title" data-i18n="campus3_title">튜터링 프로그램</h3>
+            <p class="campus-card-desc" data-i18n="campus3_desc">
+              전공 및 학업 과정에서 스터디 그룹을 이루어 함께 문제를 해결하고 학습 역량을 강화했습니다. 지식을 나누며 스스로도 한 단계 더 깊이 성장하는 보람을 얻었습니다.
+            </p>
+            <div class="campus-card-highlights">
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span data-i18n="campus3_pt1">협력적 자기주도 학습 증진</span>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span data-i18n="campus3_pt2">동반 성장의 가치 실현</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. My Hobbies 섹션 -->
+    <section class="section hobbies-section" id="hobbies">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle" data-i18n="hobbies_subtitle">What I Love</span>
+          <h2 class="section-title" data-i18n="hobbies_title">취미 & 힐링 라이프</h2>
+          <div class="title-underline"></div>
+          <p class="section-desc" data-i18n="hobbies_desc">
+            친구들과 맛있는 음식을 먹고, 예쁜 추억을 사진으로 남기는 것이 가장 큰 힐링입니다!
+          </p>
+        </div>
+
+        <div class="hobbies-grid">
+          <!-- 맛집 탐방 카드 -->
+          <div class="hobby-card">
+            <div class="hobby-visual bg-food-1">
+              <span class="hobby-sticker">🍜</span>
+            </div>
+            <div class="hobby-content">
+              <h3 class="hobby-name" data-i18n="hobby1_title">친구들과 맛집 탐방</h3>
+              <p class="hobby-text" data-i18n="hobby1_desc">
+                동기 및 친구들과 함께 소문난 핫플레이스와 숨은 맛집을 찾아다니며 맛있는 음식을 먹는 시간을 제일 좋아합니다.
+              </p>
+              <div class="hobby-tags">
+                <span class="hobby-tag">#맛집투어</span>
+                <span class="hobby-tag">#미식힐링</span>
+                <span class="hobby-tag">#친구들과함께</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 푸드 포토그래피 -->
+          <div class="hobby-card">
+            <div class="hobby-visual bg-food-2">
+              <span class="hobby-sticker">📸</span>
+            </div>
+            <div class="hobby-content">
+              <h3 class="hobby-name" data-i18n="hobby2_title">음식 사진 촬영</h3>
+              <p class="hobby-text" data-i18n="hobby2_desc">
+                맛있는 요리가 나오면 색감과 구도를 살려 정성껏 사진으로 담아둡니다. 눈으로도 즐기고 기록으로도 남기는 즐거움!
+              </p>
+              <div class="hobby-tags">
+                <span class="hobby-tag">#푸드스타그램</span>
+                <span class="hobby-tag">#감성사진</span>
+                <span class="hobby-tag">#사진기록</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 인생샷 & 인증샷 남기기 -->
+          <div class="hobby-card">
+            <div class="hobby-visual bg-food-3">
+              <span class="hobby-sticker">👭</span>
+            </div>
+            <div class="hobby-content">
+              <h3 class="hobby-name" data-i18n="hobby3_title">우정 인증 사진 & 추억</h3>
+              <p class="hobby-text" data-i18n="hobby3_desc">
+                함께 웃고 이야기 나눈 순간들을 셀카나 단체 사진으로 포착하여 소중한 대학생활 앨범을 만들어 가고 있습니다.
+              </p>
+              <div class="hobby-tags">
+                <span class="hobby-tag">#네컷사진</span>
+                <span class="hobby-tag">#추억기록</span>
+                <span class="hobby-tag">#우정스타그램</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 감성 인용 배너 -->
+        <div class="quote-banner">
+          <div class="quote-icon">“</div>
+          <p class="quote-text" data-i18n="quote_text">
+            "좋은 사람들과 함께 맛있는 음식을 나누는 순간이야말로 대학생활에서 가장 반짝이는 시간이에요."
+          </p>
+          <div class="quote-author">- ZHOU YUXUAN -</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Skills & Competency 섹션 -->
+    <section class="section skills-section" id="skills">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle" data-i18n="skills_subtitle">Capabilities</span>
+          <h2 class="section-title" data-i18n="skills_title">보유 역량 & 소프트웨어</h2>
+          <div class="title-underline"></div>
+          <p class="section-desc" data-i18n="skills_desc">
+            경영학 전공 과정과 교내 프로젝트를 성실하게 수행하며 익힌 실무 기초 역량입니다.
+          </p>
+        </div>
+
+        <div class="skills-wrapper">
+          <div class="skills-card-main">
+            <div class="ms-suite-header">
+              <div class="ms-suite-icon">
+                <i data-lucide="layers"></i>
+              </div>
+              <div>
+                <h3 class="ms-suite-title" data-i18n="office_title">Microsoft Office 소프트웨어 활용</h3>
+                <p class="ms-suite-sub" data-i18n="office_sub">보고서 작성, 데이터 정리, 프레젠테이션 제작을 위한 탄탄한 기본기</p>
+              </div>
+            </div>
+
+            <div class="software-bars">
+              <!-- Excel -->
+              <div class="software-item">
+                <div class="sw-info">
+                  <div class="sw-name-wrap">
+                    <span class="sw-badge excel">XLS</span>
+                    <span class="sw-name">Microsoft Excel</span>
+                  </div>
+                  <span class="sw-desc-label" data-i18n="sw_excel_desc">데이터 정리 & 기초 수식 분석</span>
+                </div>
+                <div class="sw-bar-track">
+                  <div class="sw-bar-fill fill-excel" style="width: 85%;"></div>
+                </div>
+              </div>
+
+              <!-- PowerPoint -->
+              <div class="software-item">
+                <div class="sw-info">
+                  <div class="sw-name-wrap">
+                    <span class="sw-badge ppt">PPT</span>
+                    <span class="sw-name">Microsoft PowerPoint</span>
+                  </div>
+                  <span class="sw-desc-label" data-i18n="sw_ppt_desc">깔끔한 발표 자료 구성 & 슬라이드 디자인</span>
+                </div>
+                <div class="sw-bar-track">
+                  <div class="sw-bar-fill fill-ppt" style="width: 90%;"></div>
+                </div>
+              </div>
+
+              <!-- Word -->
+              <div class="software-item">
+                <div class="sw-info">
+                  <div class="sw-name-wrap">
+                    <span class="sw-badge word">DOC</span>
+                    <span class="sw-name">Microsoft Word</span>
+                  </div>
+                  <span class="sw-desc-label" data-i18n="sw_word_desc">단정한 문서 서식 & 리포트 작성</span>
+                </div>
+                <div class="sw-bar-track">
+                  <div class="sw-bar-fill fill-word" style="width: 88%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 전공 연계 및 협업 역량 -->
+          <div class="soft-skills-grid">
+            <div class="soft-card">
+              <div class="soft-icon icon-mint"><i data-lucide="message-square"></i></div>
+              <h4 class="soft-title" data-i18n="soft1_title">다문화 커뮤니케이션</h4>
+              <p class="soft-desc" data-i18n="soft1_desc">한국어와 중국어를 바탕으로 한 유연한 소통 및 글로벌 학우들과의 원활한 팀워크</p>
+            </div>
+            <div class="soft-card">
+              <div class="soft-icon icon-yellow"><i data-lucide="briefcase"></i></div>
+              <h4 class="soft-title" data-i18n="soft2_title">경영학적 기초 사고</h4>
+              <p class="soft-desc" data-i18n="soft2_desc">조직, 마케팅, 관리 전반에 걸친 경영학 전공 지식과 프로젝트 협업 감각</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 인터랙티브 방명록 & 인사하기 (친근한 대학생 웹사이트 요소) -->
+    <section class="section message-section" id="contact">
+      <div class="section-container">
+        <div class="message-card">
+          <div class="message-inner">
+            <div class="msg-icon">💌</div>
+            <h3 class="msg-title" data-i18n="msg_title">언제나 반갑게 인사해주세요!</h3>
+            <p class="msg-desc" data-i18n="msg_desc">
+              저의 웹사이트를 방문해 주셔서 진심으로 감사드립니다. 캠퍼스에서 만나면 밝게 인사 나눠요!
+            </p>
+            <div class="contact-pill-box">
+              <div class="contact-pill">
+                <i data-lucide="mail"></i>
+                <span>zhouyuxuan@hallym.ac.kr</span>
+              </div>
+              <div class="contact-pill">
+                <i data-lucide="map-pin"></i>
+                <span data-i18n="contact_loc">강원특별자치도 춘천시 한림대학길 1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">ZHOU YUXUAN</span>
+        <span class="footer-copy">© 2026 ZHOU YUXUAN. All rights reserved.</span>
+      </div>
+      <div class="footer-center">
+        <span data-i18n="footer_slogan">Hallym University · Department of Business Administration</span>
+      </div>
+      <div class="footer-right">
+        <a href="#home" class="back-to-top" id="back-to-top" aria-label="Back to top">
+          <i data-lucide="chevron-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Javascript -->
+  <script src="./main.js"></script>
+</body>
+</html>
